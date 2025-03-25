@@ -17,16 +17,16 @@ class routes_manager{
        
         switch ($uri){
             case"/dashboard":
-                header('../front-end/dashboard.html');
+                header('Location: ../dashboard.html');
                 break;
             case"/login":
-                header('../front-end/login.html');
+                header('Location: ../login.html');
                 break;
             case "/auth":
-                header('auth.php');
+                header('Location: ../back-end/auth.php');
                 break;
             case "/home":
-                 header("../front-end/homepage.html");
+                header("Location: ../homepage.html");
                 break;
         }
     }        

@@ -40,8 +40,8 @@ class database_manager{
 
     public function checkUser($email, $pswd){
         try{
-        $stmt = $_dbAccess->prepare('SELECT * FROM users WHERE email = :email AND pswd = :pswd');
-        $stmt->execute(['email' => $email, 'password' => $pswd]);
+        $stmt = self::$_dbAccess->prepare('SELECT * FROM Users WHERE email = :email AND password = :pswd');
+        $stmt->execute(['email' => $email, 'pswd' => $pswd]);
         return $stmt->fetch();
        } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());

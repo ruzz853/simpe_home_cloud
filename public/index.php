@@ -34,7 +34,7 @@
 
     <?php 
 
-      require '../back-end/auth.php';
+      require './back-end/auth.php';
 
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
